@@ -6,7 +6,7 @@ target 'SwiftTestDemo' do
   pod 'SnapKit', '~> 5.0.1'  # 自动布局框架
   
   # 配置flutter相关path
-  flutter_application_path = '../flutter-demo'
+  flutter_application_path = '../flutter-module'
   
   load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
 
