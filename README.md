@@ -7,7 +7,7 @@
 2: 在iOS工程中，执行pod install命令，安装相关依赖。                         
 <br>
 如对您有帮助，麻烦给个star🌟，非常感谢🙏                                                                               
-<br>
+
 <br>
 Demo演示                                                                                                                                                                                
 ![image](https://github.com/zhwIdea/iOSAndFlutterExample/blob/main/示例演示.gif)
