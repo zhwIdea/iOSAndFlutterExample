@@ -1,0 +1,31 @@
+platform :ios, '12.0'
+
+target 'SwiftTestDemo' do
+  use_frameworks!
+  
+  pod 'SnapKit', '~> 5.0.1'  # 自动布局框架
+  
+  # 配置flutter相关path
+  flutter_application_path = '../flutter-demo'
+  
+  load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+
+  # 集成flutter的PodFile target，执行如下命令
+  install_all_flutter_pods(flutter_application_path)
+   
+  target 'SwiftTestDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SwiftTestDemoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+# 在 Podfile 的 post_install 部分，调用 flutter_post_install(installer)
+post_install do |installer|
+  flutter_post_install(installer) if defined?(flutter_post_install)
+end
